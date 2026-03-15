@@ -1,15 +1,19 @@
-# Homebrew Cask for LetsTunnel
-# Install: brew tap letstunnel/tap && brew install --cask letstunnel
-# Or:      brew install --cask letstunnel/tap/letstunnel
+# Homebrew Cask for LetsTunnel Desktop App
+# Install: brew install --cask letstunnel/tap/letstunnel-app
 #
 # This file is auto-updated by the release workflow.
 # The tap repo is: https://github.com/letstunnel/homebrew-tap
 
-cask "letstunnel" do
+cask "letstunnel-app" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/letstunnel/letstunnel-releases/releases/latest/download/LetsTunnel_aarch64.dmg"
+  if Hardware::CPU.arm?
+    url "https://github.com/letstunnel/letstunnel-releases/releases/latest/download/LetsTunnel_aarch64.dmg"
+  else
+    url "https://github.com/letstunnel/letstunnel-releases/releases/latest/download/LetsTunnel_x64.dmg"
+  end
+
   name "LetsTunnel"
   desc "Local development tunneling — public URLs, .local domains, request inspector"
   homepage "https://letstunnel.com"
