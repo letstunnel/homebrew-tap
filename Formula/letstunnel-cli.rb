@@ -14,17 +14,17 @@ class LetstunnelCli < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/letstunnel/letstunnel-releases/releases/download/v#{version}/lt-#{version}-darwin-arm64.tar.gz"
-      sha256 :no_check
+      sha256 "0bac69572a65804627b0bdecf0340d446fd0c0f18eb9ef7b826395278c88f38d"
     elsif Hardware::CPU.intel?
       url "https://github.com/letstunnel/letstunnel-releases/releases/download/v#{version}/lt-#{version}-darwin-x64.tar.gz"
-      sha256 :no_check
+      sha256 "2e76b87d51e380de33fd2fefdecd6de2b52e8a37e8f88f89fcccab8533f727be"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/letstunnel/letstunnel-releases/releases/download/v#{version}/lt-#{version}-linux-x64.tar.gz"
-      sha256 :no_check
+      sha256 "cf80f3b7c1a45b586aea766e82a662d7f059bb6ed2c51a412828c9501f31b6eb"
     end
   end
 
