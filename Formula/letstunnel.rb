@@ -8,22 +8,22 @@ class Letstunnel < Formula
   desc "Expose your localhost to the world — public URLs, .local domains, request inspector"
   homepage "https://letstunnel.com"
   license "MIT"
-  version "0.1.14"
+  version "0.1.15"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/letstunnel/letstunnel-releases/releases/download/v#{version}/lt-#{version}-darwin-arm64.tar.gz"
-      sha256 "728a8383f3f50dc12b322ebc240c4d20341a9d77ca4a6550bbd8118d4e59adfd"
+      sha256 "878dbc46e26775609af5c611692a8663416f1d213884180dcff0fb52726fa9b1"
     elsif Hardware::CPU.intel?
       url "https://github.com/letstunnel/letstunnel-releases/releases/download/v#{version}/lt-#{version}-darwin-x64.tar.gz"
-      sha256 "ebec87f48db03cfcb09a6381f5c2c035b6f04c2f026f523f0fd1759e1c4e1aac"
+      sha256 "c114ed53f92cd5be6e7cf3050f3b90d144357fbb3af926b05b1e141d2d6ef358"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/letstunnel/letstunnel-releases/releases/download/v#{version}/lt-#{version}-linux-x64.tar.gz"
-      sha256 "8e4f44712c473dfae4efb9c8f92eeee865703a9b5d84076f970a482cb645e482"
+      sha256 "b48568458796adf6d39c842e23285037ffd4cd7e50b29981978275c911e255ab"
     end
   end
 
